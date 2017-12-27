@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Letsworkout.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/user")]
     public class UserController : Controller
     {
         public IUserService _userService { get; set; }
@@ -20,7 +20,7 @@ namespace Letsworkout.Api.Controllers
             this._userService = userService;
         }
 
-        // [Bind("username, password")]
+        // ToDo: Change hard coded messages to use some Internationalisation technique
         [HttpPost("")]
         public ApiResponse<UserViewModel> Post([FromBody] CreateUserViewModel model)
         {
@@ -48,8 +48,9 @@ namespace Letsworkout.Api.Controllers
                     System.Net.HttpStatusCode.BadRequest, 
                     bex.brokenRules);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
+                // ToDo: Log the Exception
                 response = ApiResponse<UserViewModel>.CreateResponse(
                     true, 
                     "Ocorreu um erro ao processar sua solicitação.", 
