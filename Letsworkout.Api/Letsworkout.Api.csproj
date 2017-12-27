@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+    <Folder Include="Infrastructure\" />
+    <Folder Include="Infrastructure\Model\" />
+    <Folder Include="Infrastructure\Repository\" />
+    <Folder Include="Infrastructure\Model\Address\" />
+    <Folder Include="Infrastructure\Model\Gym\" />
+    <Folder Include="Infrastructure\Model\Person\" />
+    <Folder Include="Infrastructure\Model\Teacher\" />
+    <Folder Include="Infrastructure\Model\Trainning\" />
+    <Folder Include="Infrastructure\Model\User\" />
+    <Folder Include="Infrastructure\Domain\" />
+    <Folder Include="Infrastructure\Domain\Data\" />
+    <Folder Include="Infrastructure\Repository\Implementation\" />
+    <Folder Include="Infrastructure\Services\" />
+    <Folder Include="Infrastructure\Services\Interfaces\" />
+    <Folder Include="Infrastructure\Services\Implementation\" />
+    <Folder Include="Infrastructure\Services\Message\" />
+    <Folder Include="Infrastructure\Services\Message\User\" />
+    <Folder Include="Util\" />
+    <Folder Include="Infrastructure\Services\Mapping\" />
+    <Folder Include="Infrastructure\Services\ViewModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" />
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="1.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+  </ItemGroup>
+</Project>
